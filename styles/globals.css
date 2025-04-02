@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;500&family=Caveat&display=swap');
+
+body {
+  @apply bg-dark text-light font-body;
+  background: linear-gradient(135deg, #1E1E1E 0%, #121212 100%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-heading font-bold;
+}
+
+p {
+  @apply text-secondary leading-relaxed;
+}
+
+a {
+  @apply transition-all duration-200;
+}
+
+.timeline-dot {
+  @apply absolute w-4 h-4 bg-primary rounded-full z-10;
+  box-shadow: 0 0 0 4px rgba(247, 183, 51, 0.2);
+}
+
+.vertical-timeline-line {
+  @apply absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary/30;
+}
+
+/* Fix for hydration issues with animations */
+.no-js-animation {
+  opacity: 1 !important;
+  transform: none !important;
+}
