@@ -16,9 +16,9 @@ export default function Hero() {
         <div className="order-1">
           {isMounted ? (
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 1.1 }}
             >
               <Image 
                 src="/images/character.png" 
@@ -42,25 +42,25 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h2 className="text-gray-300 text-xl mb-4 font-heading">HI, I AM MORGAN, I DESIGN</h2>
+              <h2 className="text-gray-300 text-xl mb-4 font-heading">HI, I AM NEDJEM EDDINE, I AM THE PERFECT</h2>
               <h1 className="text-primary text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight mb-4">
-                THE PERFECT<br />WEBSITE
+                WEB DEVELOPER<br />IT SUPPORT
               </h1>
               <h3 className="text-gray-300 text-xl mb-12 font-heading">FOR YOUR BUSINESS!</h3>
               
               <div className="mt-28 text-right">
                 <p className="text-gray-300 text-lg font-heading tracking-wider">
-                  A GRAPHICS DESIGNER<br />
-                  THAT SOLVES DESIGN<br />
-                  RELATED PROBLEMS.
+                  AN IT SUPPORT SPECIALIST<br />
+                  WHO SOLVES<br />
+                  IT RELATED PROBLEMS.
                 </p>
               </div>
             </motion.div>
           ) : (
             <div>
-              <h2 className="text-gray-300 text-xl mb-4 font-heading">HI, I AM MORGAN, I DESIGN</h2>
+              <h2 className="text-gray-300 text-xl mb-4 font-heading">HI, I AM NEDJEM EDDINE, I AM THE PERFECT</h2>
               <h1 className="text-primary text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight mb-4">
-                THE PERFECT<br />WEBSITE
+              WEB DEVELOPER<br />IT SUPPORT
               </h1>
               <h3 className="text-gray-300 text-xl mb-12 font-heading">FOR YOUR BUSINESS!</h3>
             </div>

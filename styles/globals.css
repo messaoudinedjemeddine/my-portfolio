@@ -2,36 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;500&family=Caveat&display=swap');
-
+/* Base Styles */
 body {
-  @apply bg-dark text-light font-body;
-  background: linear-gradient(135deg, #1E1E1E 0%, #121212 100%);
+  @apply bg-dark-background text-dark-text transition-colors duration-200;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  @apply font-heading font-bold;
+/* Navbar Styling */
+nav {
+  @apply bg-dark-background shadow-lg;
 }
 
-p {
-  @apply text-secondary leading-relaxed;
+nav a {
+  @apply text-dark-text transition-colors duration-200;
 }
 
-a {
-  @apply transition-all duration-200;
+/* Hover Effect for Navbar Links */
+nav a:hover {
+  @apply text-primary;
+}
+
+/* Button Styling */
+button {
+  @apply bg-primary text-dark-text font-bold py-2 px-6 rounded-lg hover:bg-primary/90 transition-all duration-200;
+}
+
+/* Experience Timeline */
+.timeline-line {
+  @apply absolute left-1/2 w-1 h-full bg-gray-600;
+  transform: translateX(-50%);
 }
 
 .timeline-dot {
-  @apply absolute w-4 h-4 bg-primary rounded-full z-10;
-  box-shadow: 0 0 0 4px rgba(247, 183, 51, 0.2);
+  @apply absolute left-1/2 w-4 h-4 bg-primary rounded-full z-10;
+  box-shadow: 0px 0px 10px rgba(247, 183, 51, 0.5);
 }
 
-.vertical-timeline-line {
-  @apply absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary/30;
+/* Skills Slider */
+.skills-slider-container {
+  @apply relative overflow-hidden px-16;
 }
 
-/* Fix for hydration issues with animations */
-.no-js-animation {
-  opacity: 1 !important;
-  transform: none !important;
+.skill-item {
+  @apply flex flex-col items-center px-8 flex-shrink-0;
+}
+
+.slider-arrow {
+  @apply absolute top-1/2 -translate-y-1/2 bg-dark-card p-4 rounded-full shadow-lg hover:bg-primary/20 transition-all duration-200;
 }

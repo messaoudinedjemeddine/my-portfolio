@@ -6,19 +6,19 @@ export default function Projects() {
     {
       title: "E-commerce Website",
       category: "Web Design",
-      image: "/images/project1.jpg",
+      image: "/images/project1.png",
       description: "Modern e-commerce platform with seamless user experience."
     },
     {
       title: "Mobile Banking App",
       category: "UI/UX Design",
-      image: "/images/project2.jpg",
+      image: "/images/project1.png",
       description: "Intuitive banking application focused on security and ease of use."
     },
     {
       title: "Corporate Branding",
       category: "Branding",
-      image: "/images/project3.jpg",
+      image: "/images/project1.png",
       description: "Complete brand identity for a tech startup."
     },
   ];
@@ -78,7 +78,7 @@ export default function Projects() {
           viewport={{ once: true }}
         >
           <a 
-            href="https://github.com/yourusername" 
+            href="https://github.com/messaoudinedjemeddine" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-block"

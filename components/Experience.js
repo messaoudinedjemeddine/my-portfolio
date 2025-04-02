@@ -1,74 +1,63 @@
 import { motion } from 'framer-motion';
 
 export default function Experience() {
+  // Array of random experiences
   const experiences = [
     {
-      year: "2022 - Present",
-      title: "Senior UI/UX Designer",
-      company: "Creative Agency",
-      description: "Leading design projects for major clients, creating user-friendly interfaces, and mentoring junior designers."
+      title: "Frontend Developer",
+      company: "Tech Solutions Inc.",
+      duration: "Jan 2020 - Dec 2021",
+      description: "Developed responsive websites and optimized user interfaces using React and Tailwind CSS.",
     },
     {
-      year: "2019 - 2022",
-      title: "UI Designer",
-      company: "Tech Startup",
-      description: "Designed responsive websites and mobile applications, collaborated with development teams, and conducted user testing."
+      title: "Backend Developer",
+      company: "Cloud Innovators",
+      duration: "Feb 2019 - Dec 2020",
+      description: "Built scalable APIs and managed databases using Node.js, Express, and MongoDB.",
     },
     {
-      year: "2017 - 2019",
-      title: "Graphic Designer",
-      company: "Marketing Firm",
-      description: "Created visual concepts for marketing campaigns, designed brand materials, and worked on digital advertisements."
-    }
+      title: "Full Stack Developer",
+      company: "Startup Hub",
+      duration: "Jan 2022 - Present",
+      description: "Led the development of full-stack web applications, integrating frontend and backend technologies.",
+    },
   ];
 
   return (
-    <section id="experience" className="bg-dark py-20">
-      <div className="container mx-auto px-4">
-        <motion.h2 
-          className="text-4xl font-bold text-primary text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          Experience
-        </motion.h2>
+    <section id="experience" className="py-20 bg-light-card dark:bg-dark-card">
+      <h2 className="text-4xl font-bold text-center mb-10 text-light-text dark:text-dark-text">
+        Experience
+      </h2>
+      
+      <div className="timeline-container relative container mx-auto px-4">
+        {/* Vertical Timeline Line */}
+        <div className="timeline-line absolute left-1/2 transform -translate-x-1/2 h-full bg-gray-300 dark:bg-gray-600"></div>
+        
+        {experiences.map((exp, index) => (
+          <div key={index} className="relative mb-20">
+            {/* Timeline Dot */}
+            <div 
+              className="timeline-dot absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full z-10"
+              style={{ top: `${index * 25}%` }}
+            ></div>
 
-        <div className="relative">
-          {/* Vertical Line */}
-          <div className="vertical-timeline-line"></div>
-          
-          {experiences.map((exp, index) => (
-            <motion.div 
-              key={index} 
-              className={`relative mb-12 md:w-1/2 ${
-                index % 2 === 0 ? 'md:pr-10 md:ml-auto' : 'md:pl-10'
-              }`}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              viewport={{ once: true }}
-            >
-              {/* Timeline dot */}
-              <div className="timeline-dot left-0 md:left-auto md:right-auto md:-translate-x-1/2 top-5"></div>
-              
-              {/* Content Box */}
+            {/* Experience Card */}
+            <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:ml-auto' : 'md:mr-auto'} p-6`}>
               <motion.div 
-                className="pl-8 md:pl-0 bg-gray-800/50 rounded-lg p-6 border border-gray-700 hover:border-primary/50 transition-colors"
-                whileHover={{ 
-                  y: -5,
-                  boxShadow: "0 10px 25px -5px rgba(247, 183, 51, 0.1)"
-                }}
+                className="bg-light-card dark:bg-dark-card p-6 rounded-xl shadow-lg"
+                initial={{ opacity: 0, x: index % 2 === 0 ? 100 : -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
               >
-                <span className="text-primary font-medium">{exp.year}</span>
-                <h3 className="text-white text-xl font-bold mt-2">{exp.title}</h3>
-                <h4 className="text-gray-400 font-medium">{exp.company}</h4>
-                <p className="text-gray-300 mt-3">{exp.description}</p>
+                {/* Card Content */}
+                <h3 className="text-xl font-bold text-primary mb-2">{exp.title}</h3>
+                <p className="text-sm text-light-text dark:text-dark-text font-semibold">{exp.company}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">{exp.duration}</p>
+                <p className="mt-4 text-light-text dark:text-dark-text">{exp.description}</p>
               </motion.div>
-            </motion.div>
-          ))}
-        </div>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
