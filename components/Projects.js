@@ -12,13 +12,13 @@ export default function Projects() {
     {
       title: "Mobile Banking App",
       category: "UI/UX Design",
-      image: "/images/project1.png",
+      image: "/images/project2.png",
       description: "Intuitive banking application focused on security and ease of use."
     },
     {
       title: "Corporate Branding",
       category: "Branding",
-      image: "/images/project1.png",
+      image: "/images/project3.png",
       description: "Complete brand identity for a tech startup."
     },
   ];

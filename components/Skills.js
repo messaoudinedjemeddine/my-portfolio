@@ -3,16 +3,22 @@ import { motion } from 'framer-motion';
 
 export default function Skills() {
   const skills = [
-    { name: "React", logo: "/skills/react-logo.png" },
-    { name: "Node.js", logo: "/skills/nodejs-logo.png" },
-    { name: "JavaScript", logo: "/skills/javascript-logo.png" },
-    { name: "Python", logo: "/skills/python-logo.png" },
-    { name: "CSS", logo: "/skills/css-logo.png" },
-    { name: "HTML", logo: "/skills/html-logo.png" },
-    { name: "Git", logo: "/skills/git-logo.png" },
-    { name: "Docker", logo: "/skills/docker-logo.png" },
-    { name: "MongoDB", logo: "/skills/mongodb-logo.png" },
-    { name: "PostgreSQL", logo: "/skills/postgresql-logo.png" }
+    { name: "Windows", logo: "/images/skills/windows.png" },
+    { name: "MacOs", logo: "/images/skills/macos.png" },
+    { name: "JavaScript", logo: "/images/skills/js.png" },
+    { name: "HTML", logo: "/images/skills/html.png" },
+    { name: "CSS", logo: "/images/skills/css.png" },
+    { name: "MySQL", logo: "/images/skills/sql.png" },
+    { name: "Git", logo: "/images/skills/git.png" },
+    { name: "PHP", logo: "/images/skills/php.png" },
+    { name: "Google Workspace", logo: "/images/skills/google.png" },
+    { name: "Wireshark", logo: "/images/skills/wireshark.png" },
+    { name: "Microsoft Office", logo: "/images/skills/office.png" },
+    { name: "Adobe Pack", logo: "/images/skills/adobe.png" },
+    { name: "Linux", logo: "/images/skills/linux.png" },
+    { name: "Bootstrap", logo: "/images/skills/bootstrap.png" },
+    { name: "Tailwind", logo: "/images/skills/tailwind.png" },
+    { name: "Cisco Packet Tracer", logo: "/images/skills/cisco.png" }
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
